@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- swiper CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+
+    <link rel="stylesheet" href="./public/css/new.css">
+</head>
+
+<body style="background-color: #f6f6f6;">
+    <header>
+        <h1 class="logo">
+            <a class="flex-center"><img class="logo-lg" src="https://sancharity.org//assets/images/logo.svg"
+                    alt="台北市勝慈社會福利基金會 logo">
+                <img src="./public/img/logo_fb.png" class="logo-mobile" alt="">
+            </a>
+        </h1>
+        <nav class="mainNav">
+            <ul>
+                <li anchor="news"><a href="//sancharity.org/news">
+                        <img src="./public/img/new.png" alt="">
+                        <span>最新消息</span>
+                    </a></li>
+                <li anchor="donate"><a href="//sancharity.org/donate">
+                        <img src="./public/img/donate.png" alt="">
+                        <span>捐款與徵信</span></a></li>
+                <li anchor="project"><a href="//sancharity.org/project_ct">
+                        <img src="./public/img/project.png" alt="">
+                        <span>專案介紹</span></a></li>
+                <li anchor="video"><a href="//sancharity.org/video">
+                        <img src="./public/img/video.png" alt="">
+                        <span>影音專區</span></a></li>
+                <li anchor="contact"><a href="//sancharity.org/contact">
+                        <img src="./public/img/contact.png" alt="">
+                        <span>聯絡我們</span></a></li>
+            </ul>
+        </nav>
+        <a href="#" class="user-btn">
+            登入/註冊
+        </a>
+        <a class="donateBtn" href="//sancharity.org/donate">
+            <b>立即捐款</b>
+        </a>
+    </header>
+    <!--漢堡選單-->
+    <nav class="btn-mobile visible-xs">
+        <div>
+            <hr class="hr0">
+            <hr class="hr1">
+            <hr class="hr2">
+        </div>
+    </nav>
+    <main class="wrapper">
+        <form class="container pt-5">
+            <h3 class="title">捐款者基本資料</h3>
+            <input type="text" placeholder="姓名">
+            <div class="select-btn">
+                <div>男</div>
+                <div>女</div>
+            </div>
+            <input type="email" placeholder="信箱">
+            <input type="text" placeholder="身分證/統一編號">
+            <input placeholder="生日" id="birth" class="form-control datepicker" data-date-format="yyyy/mm/dd">
+            <input type="phone" placeholder="電話">
+            <div class="address">
+                <div role="tw-city-selector" class="city-selector-set">
+                    <div>
+                        <select class="county"></select>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div>
+                        <select class="district"></select>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                </div>
+                <input type="text" placeholder="詳細地址">
+            </div>
+            <div class="how">
+                <label>如何得知捐款訊息</label>
+                <div class="check-info">
+                    <div class="info-select">
+                        <div class="check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span>親友介紹</span>
+                    </div>
+                    <div class="info-select">
+                        <div class="check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span>網路</span>
+                    </div>
+                    <div class="info-select">
+                        <div class="check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span>廣播</span>
+                    </div>
+                    <div class="info-select">
+                        <div class="check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span>會訊</span>
+                    </div>
+                    <div class="info-select">
+                        <div class="check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span>電視</span>
+                    </div>
+                    <div class="info-select">
+                        <div class="check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span>報紙</span>
+                    </div>
+                    <div class="info-select">
+                        <div class="check">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span>其他</span>
+                    </div>
+                </div>
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="內容"></textarea>
+            <div class="send-btn">
+                <input type="reset" value="清除重填">
+                <input type="submit" value="立即捐款">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="container pt-5 pb-4">
+            <div class="justify-content-between">
+                <div class="f-right d-inline-block">
+                    <div class="swiper-container" id="qrcode">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url(./public/img/210026033612.png)">
+                            </div>
+                            <div class="swiper-slide" style="background-image:url(./public/img/210026033628.png)">
+                            </div>
+                            <div class="swiper-slide" style="background-image:url(./public/img/210026033642.png)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="share mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="f-left d-inline-block">
+                    <ul>
+                        <li><a href="#">隱私權政策</a></li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>(10596)台北市松山區民生東路三段131號9樓903室</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>02-2546-8199</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-fax"></i>
+                            <span>02-2547-2695</span>
+                        </li>
+                        <li>2020,All rights reserved.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- awesomefont CDN -->
+    <script src="https://kit.fontawesome.com/69fd600045.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstap-datepicker JS CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+        $('.datepicker').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-city-selector@2.1.1/dist/tw-city-selector.min.js"></script>
+    <script>
+        new TwCitySelector({
+            el: '.city-selector-set',
+            elCounty: '.county', // 在 el 裡查找 element
+            elDistrict: '.district', // 在 el 裡查找 element
+        });
+    </script>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- swiper JS CDN -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        $(".select-btn").children("div").click(function () {
+            $(".select-btn").children("div").removeClass("aactive");
+            $(this).addClass("aactive");
+            console.log("!!!");
+        })
+    </script>
+    <script>
+        $(".info-select").click(function () {
+            console.log("???");
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+            } else {
+                $(this).addClass("active");
+            }
+        })
+    </script>
+     <script>
+        var Qswiper = new Swiper("#qrcode", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <!--myjs-->
+    <script src="./public/js/animate.js"></script>
+</body>
+
+</html>
