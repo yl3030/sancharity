@@ -71,23 +71,47 @@
             <div class="select-btn">
                 <div>男</div>
                 <div>女</div>
+                <div>男</div>
+                <div>女</div>
             </div>
             <input type="email" placeholder="信箱">
             <input type="text" placeholder="身分證/統一編號">
             <input placeholder="生日" id="birth" class="form-control datepicker" data-date-format="yyyy/mm/dd">
             <input type="phone" placeholder="電話">
+            <input type="number" placeholder="金額">
+            <div class="radio-box">
+                <span class="rb">
+                   <div class="radio">
+                       <div class="r-circle"></div>
+                   </div>
+                   <span>男</span>
+                </span>
+                <span class="rb">
+                    <div class="radio">
+                        <div class="r-circle"></div>
+                    </div>
+                   <span>女</span>
+                </span>
+            </div>
             <div class="address">
                 <div role="tw-city-selector" class="city-selector-set">
-                    <div>
+                    <div class="select-box">
                         <select class="county"></select>
                         <i class="fas fa-angle-down"></i>
                     </div>
-                    <div>
+                    <div class="select-box">
                         <select class="district"></select>
                         <i class="fas fa-angle-down"></i>
                     </div>
                 </div>
                 <input type="text" placeholder="詳細地址">
+            </div>
+            <div class="select-box">
+                <select class="">
+                    <option value="">需要收據</option>
+                    <option value="">不需收據</option>
+                </select>
+                <i class="fas fa-angle-down"></i>
             </div>
             <div class="how">
                 <label>如何得知捐款訊息</label>
@@ -245,7 +269,13 @@
             }
         })
     </script>
-     <script>
+    <script>
+        $(".rb").click(function(){
+            $(".rb").removeClass("active");
+            $(this).addClass("active");
+        })
+    </script>
+    <script>
         var Qswiper = new Swiper("#qrcode", {
             loop: true,
             autoplay: {

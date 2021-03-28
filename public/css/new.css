@@ -814,6 +814,11 @@ form .title {
     width: 160px;
     margin: 0 auto 40px;
 }
+form label {
+    color: #535353;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
 form input {
     border: 0;
     background-color: #fff;
@@ -825,6 +830,7 @@ form input {
     padding-left: 10px;
     padding-right: 10px;
     display: block;
+    outline-color: #eea0a0;
 }
 form input::placeholder {
     color: #bdbdbd;
@@ -842,6 +848,69 @@ form input::-ms-input-placeholder {
     color: #bdbdbd;
 }
 
+form input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+form .radio-box {
+    width: 70%;
+    margin: 0 auto 20px;
+}
+
+form .radio-box .rb {
+    line-height: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form .radio-box .rb:last-child {
+    margin-right: 0;
+}
+
+form .radio-box .rb .radio {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-bottom: 0;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(179, 179, 179);
+    position: relative;
+}
+
+form .radio-box .rb .radio .r-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #eea0a0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+form .radio-box .rb span {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+form .radio-box .rb.active .radio {
+    border-color: #eea0a0;
+}
+
+form .radio-box .rb.active .radio .r-circle {
+    opacity: 1;
+}
+
 form input.datepicker {
     border-radius: 8px;
     width: 70%;
@@ -856,7 +925,6 @@ form input.datepicker::placeholder {
 form .select-btn {
     width: 70%;
     margin: 0 auto 20px;
-
 }
 
 form .select-btn div {
@@ -869,6 +937,7 @@ form .select-btn div {
     transition: 0.3s;
     cursor: pointer;
     display: inline-block;
+    margin-right: 20px;
 }
 
 form .select-btn div.aactive {
@@ -877,8 +946,8 @@ form .select-btn div.aactive {
     border-color: #eea0a0;
 }
 
-form .select-btn div:first-child {
-    margin-right: 20px;
+form .select-btn div:last-child {
+    margin-right: 0;
 }
 
 form .select-btn div:hover {
@@ -898,10 +967,10 @@ form .address .city-selector-set {
     justify-content: space-between;
 }
 
-form .address .city-selector-set>div {
+form .select-box {
     width: 70%;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
 
 form .address .city-selector-set>div:first-child {
@@ -912,7 +981,7 @@ form .address .city-selector-set>div:nth-child(2) {
     padding-left: 7px;
 }
 
-form .address .city-selector-set select {
+form select {
     width: 100%;
     border: 0;
     background-color: #fff;
@@ -924,9 +993,10 @@ form .address .city-selector-set select {
     appearance: none;
     padding-left: 10px;
     color: #4d4d4d;
+    outline-color: #eea0a0;
 }
 
-form .address .city-selector-set i {
+form .select-box i {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -941,12 +1011,6 @@ form .address input {
 form .how {
     width: 70%;
     margin: 0 auto 20px;
-}
-
-form label {
-    color: #535353;
-    margin-bottom: 20px;
-    font-weight: 700;
 }
 
 form .how .check-info {
@@ -1010,6 +1074,7 @@ form textarea {
     margin: 0 auto 20px;
     display: block;
     padding: 10px 15px;
+    outline-color: #eea0a0;
 }
 
 form textarea::placeholder {
@@ -1610,6 +1675,12 @@ form .send-btn input:hover {
         margin-bottom: 20px;
     }
     form input {
+        width: 100%;
+    }
+    form .radio-box {
+        width: 100%;
+    }
+    form .select-box {
         width: 100%;
     }
     form .select-btn {
